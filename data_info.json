@@ -1,0 +1,102 @@
+{
+    "sentiment_cols": [
+        "timestamp",
+        "value",
+        "classification",
+        "date"
+    ],
+    "trader_cols": [
+        "Account",
+        "Coin",
+        "Execution Price",
+        "Size Tokens",
+        "Size USD",
+        "Side",
+        "Timestamp IST",
+        "Start Position",
+        "Direction",
+        "Closed PnL",
+        "Transaction Hash",
+        "Order ID",
+        "Crossed",
+        "Fee",
+        "Trade ID",
+        "Timestamp"
+    ],
+    "sentiment_head": [
+        {
+            "timestamp": 1517463000,
+            "value": 30,
+            "classification": "Fear",
+            "date": "2018-02-01"
+        },
+        {
+            "timestamp": 1517549400,
+            "value": 15,
+            "classification": "Extreme Fear",
+            "date": "2018-02-02"
+        },
+        {
+            "timestamp": 1517635800,
+            "value": 40,
+            "classification": "Fear",
+            "date": "2018-02-03"
+        }
+    ],
+    "trader_head": [
+        {
+            "Account": "0xae5eacaf9c6b9111fd53034a602c192a04e082ed",
+            "Coin": "@107",
+            "Execution Price": 7.9769,
+            "Size Tokens": 986.87,
+            "Size USD": 7872.16,
+            "Side": "BUY",
+            "Timestamp IST": "02-12-2024 22:50",
+            "Start Position": 0.0,
+            "Direction": "Buy",
+            "Closed PnL": 0.0,
+            "Transaction Hash": "0xec09451986a1874e3a980418412fcd0201f500c95bac0f37caef8a734502ec49",
+            "Order ID": 52017706630,
+            "Crossed": true,
+            "Fee": 0.34540448,
+            "Trade ID": 895000000000000.0,
+            "Timestamp": 1730000000000.0
+        },
+        {
+            "Account": "0xae5eacaf9c6b9111fd53034a602c192a04e082ed",
+            "Coin": "@107",
+            "Execution Price": 7.98,
+            "Size Tokens": 16.0,
+            "Size USD": 127.68,
+            "Side": "BUY",
+            "Timestamp IST": "02-12-2024 22:50",
+            "Start Position": 986.5245955,
+            "Direction": "Buy",
+            "Closed PnL": 0.0,
+            "Transaction Hash": "0xec09451986a1874e3a980418412fcd0201f500c95bac0f37caef8a734502ec49",
+            "Order ID": 52017706630,
+            "Crossed": true,
+            "Fee": 0.0056,
+            "Trade ID": 443000000000000.0,
+            "Timestamp": 1730000000000.0
+        },
+        {
+            "Account": "0xae5eacaf9c6b9111fd53034a602c192a04e082ed",
+            "Coin": "@107",
+            "Execution Price": 7.9855,
+            "Size Tokens": 144.09,
+            "Size USD": 1150.63,
+            "Side": "BUY",
+            "Timestamp IST": "02-12-2024 22:50",
+            "Start Position": 1002.518996,
+            "Direction": "Buy",
+            "Closed PnL": 0.0,
+            "Transaction Hash": "0xec09451986a1874e3a980418412fcd0201f500c95bac0f37caef8a734502ec49",
+            "Order ID": 52017706630,
+            "Crossed": true,
+            "Fee": 0.0504314,
+            "Trade ID": 660000000000000.0,
+            "Timestamp": 1730000000000.0
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+﻿--- Overall Count by Sentiment ---
+Fear_Greed
+Greed      37
+Fear       32
+Neutral     8
+Name: count, dtype: int64
+
+--- 1. Performance by Sentiment ---
+  Fear_Greed      daily_pnl  win_rate
+0       Fear  209372.662205  0.869433
+1      Greed   90988.703436  0.846272
+2    Neutral   19842.797260  0.530949
+
+--- 2. Behavior by Sentiment ---
+Medians:
+   Fear_Greed  num_trades  avg_trade_size  total_volume  long_short_ratio
+0       Fear      2763.5     3207.887909   7341059.785          0.989389
+1      Greed       283.0     2786.426545    810078.520          0.647795
+2    Neutral       164.5     2317.585694    372722.080         32.351640
+
+--- 3. Behavior by Segment and Sentiment (Avg PnL) ---
+Fear_Greed           Fear          Greed       Neutral
+Segment                                               
+Frequent    324428.018469  142172.856813   6867.420164
+Infrequent   94317.305942   42498.452869  32818.174355
+
+Analysis generated and charts saved in 'charts' folder.
