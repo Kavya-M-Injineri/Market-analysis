@@ -1,4 +1,4 @@
-#  Hyperliquid Trader Sentiment Analysis
+#  Hyperliquid Trader Sentiment Analysis..........
 
 > **How does Bitcoin market fear and greed shape trader behavior and profitability on Hyperliquid?**  
 > This project answers that — with data, statistics, and a predictive model.
