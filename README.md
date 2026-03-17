@@ -1,53 +1,92 @@
-# Hyperliquid Trader Sentiment Analysis
+#  Hyperliquid Trader Sentiment Analysis
 
-This repository contains the data extraction, preprocessing, analysis, and modeling scripts to understand how Bitcoin Fear/Greed market sentiment correlates with trader behavior and profitability on Hyperliquid.
+> **How does Bitcoin market fear and greed shape trader behavior and profitability on Hyperliquid?**  
+> This project answers that — with data, statistics, and a predictive model.
+
+---
+
+## What This Project Does
+
+This repository mines the relationship between the **Bitcoin Fear & Greed Index** and real trader activity on **Hyperliquid**, a decentralized perpetuals exchange. It extracts, processes, and models daily trader behavior to surface patterns that matter:
+
+- Do traders perform better during Fear or Greed?
+- Does sentiment shift long/short bias?
+- Can we predict next-day profitability from today's sentiment?
+
+---
 
 ## Project Structure
-- `download_data.py`: Automates downloading the datasets sequentially from Google Drive.
-- `data_prep.py`: Processes the CSVs, aligns timestamps to daily level, calculates key metrics (Win Rates, Daily PnL, Long/Short Bias), and merges them into `merged_data.csv`.
-- `analysis.py`: Runs statistical comparisons grouped by sentiment, maps trader segments, and saves visualizations to the `charts/` directory.
-- `model.py`: Trains a classification model (Random Forest) to predict next-day trader profitability.
-- `report.md`: Summarizes methodology, uncovers 4 insights, proposes 2 actionable strategy frameworks, and explains the bonus model.
-- `charts/`: Directory automatically generated containing the plots.
 
-## Setup Requirements
+```
+├── download_data.py      # Fetches datasets from Google Drive
+├── data_prep.py          # Cleans, aligns, and merges CSVs → merged_data.csv
+├── analysis.py           # Statistical analysis + chart generation → charts/
+├── model.py              # Random Forest classifier for next-day profitability
+├── report.md             # Full findings, insights, and strategy frameworks
+└── charts/               # Auto-generated visualization outputs (.png)
+```
 
-1. **Python Virtual Environment** (Recommended)
-   ```cmd
-   python -m venv venv
-   .\venv\Scripts\activate
-   ```
-2. **Install Dependencies**
-   ```cmd
-   pip install pandas matplotlib seaborn scikit-learn gdown
-   ```
+---
 
-## Instructions to Run
+## Quickstart
 
-1. **Download the Data**
-   Run the download script to fetch data from the provided GDrive links:
-   ```cmd
-   python download_data.py
-   ```
-   *(Two files: `sentiment_data.csv` and `trader_data.csv` will be downloaded).*
+### 1. Set Up Environment
 
-2. **Prepare Data & Calculate Metrics**
-   ```cmd
-   python data_prep.py
-   ```
-   *(Will generate `merged_data.csv`).*
+```bash
+python -m venv venv
+.\venv\Scripts\activate       # Windows
+# source venv/bin/activate    # macOS/Linux
+```
 
-3. **Run Analysis & Generate Charts**
-   ```cmd
-   python analysis.py
-   ```
-   *(Check the `charts/` directory for `.png` outputs).*
+### 2. Install Dependencies
 
-4. **Predictive Modeling (Bonus)**
-   ```cmd
-   python model.py
-   ```
-   *(Evaluates the Random Forest model and generates `charts/feature_importances.png`).*
+```bash
+pip install pandas matplotlib seaborn scikit-learn gdown
+```
 
-## Key Deliverables
-Please review `report.md` for the analysis answers, findings, and strategy formulation per the evaluation criteria.
+### 3. Run the Pipeline
+
+```bash
+# Step 1 — Download raw data
+python download_data.py
+# → Produces: sentiment_data.csv, trader_data.csv
+
+# Step 2 — Process and merge
+python data_prep.py
+# → Produces: merged_data.csv
+
+# Step 3 — Analyze and visualize
+python analysis.py
+# → Produces: charts/*.png
+
+# Step 4 — Predictive model (bonus)
+python model.py
+# → Produces: charts/feature_importances.png
+```
+
+---
+
+## Key Metrics Computed
+
+| Metric | Description |
+|---|---|
+| **Win Rate** | % of profitable trades per trader per day |
+| **Daily PnL** | Aggregate realized profit/loss per day |
+| **Long/Short Bias** | Directional skew of open positions |
+| **Trader Segment** | Behavioral classification by activity patterns |
+
+---
+
+## Deliverables
+
+| File | Contents |
+|---|---|
+| `report.md` | Methodology, 4 core insights, 2 strategy frameworks, model explanation |
+| `charts/` | All generated visualizations |
+| `merged_data.csv` | Final processed dataset ready for analysis |
+
+---
+
+## Tech Stack
+
+`Python` · `Pandas` · `Matplotlib` · `Seaborn` · `Scikit-learn` · `gdown`
